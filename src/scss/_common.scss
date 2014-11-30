@@ -1,0 +1,504 @@
+
+/* Common
+   ========================================================================== */
+body {
+  background: $light-brown;
+  background-image: url(../img/common/x-plosion_bg.png);
+  background-repeat: repeat-x;
+  font: 12px Arial, sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type='text']:focus {
+  border: solid 1px $red;
+}
+
+/* Acessibility navigation */
+.accessibility-nav {
+  position: absolute;
+  top: 0;
+  left: -9999em;
+  z-index: 1000;
+
+  a {
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+
+  a:active,
+  a:focus {
+    left: 9999em;
+  }
+}
+
+.hide {
+  position: absolute !important;
+  left: -9999em !important;
+}
+
+/* Image Replacement */
+.ir {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+/* Container */
+.container {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+/***********************************************************
+  Header 
+ ***********************************************************/
+
+.header {
+  @include clearfix();
+  margin: 40px 0;
+}
+
+.x-logo,
+.x-banner,
+.x-search {
+  float: left;
+}
+
+.x-banner,
+.x-search {
+  width: 320px;
+}
+
+.x-logo {
+  width: 280px;
+  padding: 5px 20px 0 20px;
+}
+
+.x-banner {
+  text-align: center;
+}
+
+.x-search {
+  text-align: right;
+  padding-top: 15px;
+}
+
+.x-search input {
+  @include inputs();
+  behavior: url(js/PIE.htc);
+}
+
+.x-search input[type="submit"] {
+  @include xbtn();
+  behavior: url(js/PIE.htc);
+}
+
+/* Navigation */
+.navigation {
+
+  ul {
+    @include border-radius(9px);
+    @include box-shadow(0.1);
+    @include background-gradient();
+    background: $red;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    behavior: url(js/PIE.htc);
+  }
+
+  li {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: $white;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    width: 159px;
+    border-left: 1px dashed $border;
+    behavior: url(js/PIE.htc);
+  }
+
+  a.left {
+    border-left: none;
+  }
+
+  a.left {
+    -webkit-border-radius: 9px 0 0 9px;
+    -moz-border-radius: 9px 0 0 9px;
+    border-radius: 9px 0 0 9px;
+    behavior: url(js/PIE.htc);
+  }
+
+  a.right {
+    -webkit-border-radius: 0 9px 9px 0;
+    -moz-border-radius: 0 9px 9px 0;
+    border-radius: 0 9px 9px 0;
+    behavior: url(js/PIE.htc);
+  }
+
+  a.active,
+  a:hover {
+    background: $brown;
+  }
+}
+
+.site-name {
+  width: 150px;
+  height: 50px;
+
+  span {
+    background: url(../img/common/logo.png) no-repeat;
+  }
+}
+
+
+/***********************************************************
+ Main content
+************************************************************/
+
+/* Content wrapper */
+.content-wrapper {
+  @include clearfix();
+  background: url(../img/common/x-plosion_bottle.jpg);
+  padding-top: 20px;
+}
+
+section,
+article {
+  @include clearfix();
+}
+
+/* Left column content */
+.left-column {
+  width: 640px;
+  float: left;
+}
+
+.main-content {
+  padding: 0 20px;
+
+  h1 {
+    font-family: $bebas;
+    font-weight: normal;
+    color: $red;
+    font-size: 50px;
+    line-height: 68px;
+    margin: 30px 0 5px 0;
+  }
+
+  h2 {
+    font-family: $bebas;
+    color: $black;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: normal;
+    margin: 0 0 30px;
+  }
+
+  .main-content-text {
+    width: 300px;
+  }
+
+  p.intro {
+    line-height: 18px;
+    color: $red;
+    font-weight: bold;
+  }
+
+  p {
+    line-height: 18px;
+    color: $text-brown;
+  }
+
+}
+
+/*Gallery */
+.gallery {
+  margin-top: 80px;
+}
+
+/* News */
+.news {
+  @include clearfix();
+  @include border-radius(9px);
+  @include box-shadow(0.1);
+  background: $white;
+  margin-top: 40px;
+  behavior: url(js/PIE.htc);
+}
+
+.news .left-pod,
+.news .right-pod {
+  float: left;
+  width: 320px;
+}
+
+.news h3 {
+  color: $black;
+  margin: 0 0 20px 0;
+  font-size:13px;
+}
+
+.news h2 {
+  background: $red; 
+  @include background-gradient();
+  color: $white;
+  font-size: 12px;
+  line-height: 15px;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 0;
+  behavior: url(js/PIE.htc);
+}
+
+.news .left-pod h2 {
+  border: none;
+  border-right: 1px dashed $light-brown;
+  -webkit-border-radius: 9px 0 0 0;
+  -moz-border-radius: 9px 0 0 0;
+  border-radius: 9px 0 0 0;
+  behavior: url(js/PIE.htc);
+}
+
+.news .right-pod h2 {
+  -webkit-border-radius: 0 9px 0 0;
+  -moz-border-radius: 0 9px 0 0;
+  border-radius: 0 9px 0 0;
+  behavior: url(js/PIE.htc);
+}
+
+.news article {
+  padding: 20px;
+}
+
+.news .left-pod article {
+  border: 0 none;
+  border-right: 1px dashed $light-brown;
+  behavior: url(js/PIE.htc);
+}
+
+.news article img {
+  float: left;
+  padding-top: 4px;
+}
+
+.news article p {
+  margin: 0 0 12px 120px;
+  line-height: 20px;
+}
+
+.news article a {
+  background: url('../img/common/x-plosion_arrow-red.png') no-repeat center right;
+  color: $red;
+  text-decoration: none;
+  padding-right: 20px;
+  margin: 0 0 0 120px;
+}
+
+
+/***********************************************************
+  Sidebar
+ ***********************************************************/
+
+.sidebar {
+  width: 300px;
+  float: right;
+}
+
+.sidebar section {
+  @include border-radius(9px);
+  @include box-shadow(0.1);
+  background: $white;
+  margin-top: 20px;
+  behavior: url(js/PIE.htc);
+
+  h3 {
+    font-size: 14px;
+    color: $red;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px;
+    border-bottom: dashed 1px $border;
+  }
+
+}
+
+/* Social links*/
+.social-links ul {
+  padding: 20px;
+  margin: 0;
+
+   li {
+    display: inline-block;
+  }
+}
+
+.fb a {
+  @include sidebar-social-icons(x-plosion_fb);
+ }
+
+.twit a {
+  @include sidebar-social-icons(x-plosion_twitter);
+}
+
+.gplus a {
+  @include sidebar-social-icons(x-plosion_google);
+}
+
+.fb a:hover,
+.twit a:hover,
+.gplus a:hover {
+  color: $black;
+  text-decoration: underline;
+}
+
+/* Randomly selected */
+.random ul {
+  margin: 0;
+  padding: 20px;
+  line-height: 25px;
+  list-style: inside url('../img/common/x-plosion_arrow.png');
+
+  li a {
+    text-decoration: none;
+    color: $text-light-brown;
+  }
+
+  li a:hover {
+    color: $black;
+    text-decoration: underline;
+  }
+}
+
+.find-us {
+
+  address {
+    padding: 20px;
+  }
+
+  p span {
+    font-weight: bold;
+  }
+
+  p {
+    @include side-bar-text();
+  }
+
+}
+
+/*Flickr*/
+.flickr-box {
+  padding: 20px;
+}
+
+.flickr p {
+  @include side-bar-text();
+}
+
+.flickr form {
+  margin-top: 20px;
+}
+
+.flickr fieldset {
+  border: none;
+  padding: 0;
+}
+
+.flickr label {
+  @include side-bar-text();
+}
+
+.flickr input {
+  @include inputs();
+  border: solid 1px $foot-brown;
+  behavior: url(js/PIE.htc);
+}
+
+.flickr button {
+  @include xbtn();
+  @include border-radius(9px);
+  margin:5px;
+  behavior: url(js/PIE.htc);
+}
+
+.flickr button:focus {
+  outline: none;
+}
+.flickr-images {
+display: none;
+}
+
+
+
+/***********************************************************
+ Footer 
+************************************************************/
+
+.footer {
+  width: 100%;
+  background: $foot-brown;
+  border-top: solid 5px $foot-dark-brown;
+  margin-top: 50px;
+
+  .footer-container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    color: $text-light-brown;
+  }
+
+  ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    border-right: 1px dotted $foot-dots-brown;
+    padding: 0 30px;
+  }
+
+  li a {
+  text-decoration: none;
+  color: $text-light-brown;
+  }
+
+  li a:hover {
+    color: $black;
+    text-decoration: underline;
+  }
+
+}
+
