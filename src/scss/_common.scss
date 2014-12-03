@@ -6,6 +6,7 @@ body {
   background-image: url(../img/common/x-plosion_bg.png);
   background-repeat: repeat-x;
   font: 12px Arial, sans-serif;
+  margin: 0;
 }
 
 input:focus {
@@ -402,7 +403,7 @@ article {
     padding: 20px;
   }
 
-  p span {
+  .address-name {
     font-weight: bold;
   }
 
@@ -485,10 +486,15 @@ display: none;
   }
 
   li {
-    display: inline;
-    border-right: 1px dotted $foot-dots-brown;
+    display: inline-block;
+    border-left: 1px dotted $foot-dots-brown;
     padding: 0 30px;
   }
+  
+  li.last-footer-link {
+    border-right: 1px dotted $foot-dots-brown;
+  }
+
 
   li a {
   text-decoration: none;
